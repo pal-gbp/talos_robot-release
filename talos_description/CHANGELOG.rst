@@ -2,6 +2,16 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.2 (2025-03-12)
+------------------
+* Merge branch 'collision' into 'humble-devel'
+  Collision
+  See merge request robots/talos_robot!140
+* Modify collision_parameters.yaml
+* Update collision_parameters.yaml
+* Adapt collision_parameters.yaml to new ARILES version
+* Contributors: Adria Roig, Adrià Roig
+
 2.0.1 (2024-09-26)
 ------------------
 

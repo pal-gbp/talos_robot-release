@@ -2,6 +2,9 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.2 (2025-03-12)
+------------------
+
 2.0.1 (2024-09-26)
 ------------------
 * Merge branch 'migration_bugfix' into 'humble-devel'

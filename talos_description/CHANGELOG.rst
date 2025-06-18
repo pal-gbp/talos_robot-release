@@ -2,6 +2,20 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.0 (2025-06-18)
+------------------
+
+2.0.3 (2025-05-22)
+------------------
+* Merge branch 'sim_time' into 'humble-devel'
+  use_sim_time + head transmission  + gripper mimic
+  See merge request robots/talos_robot!142
+* Adapt head transmission to new API
+* Change head transmission name
+* Add gripper as mimic joint
+* Fix use_sim_time
+* Contributors: Adria Roig, Adrià Roig, Sai Kishor Kothakota
+
 2.0.2 (2025-03-12)
 ------------------
 * Merge branch 'collision' into 'humble-devel'

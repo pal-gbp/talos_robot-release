@@ -2,6 +2,17 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.0 (2025-06-18)
+------------------
+
+2.0.3 (2025-05-22)
+------------------
+* Merge branch 'sim_time' into 'humble-devel'
+  use_sim_time + head transmission  + gripper mimic
+  See merge request robots/talos_robot!142
+* Fix use_sim_time
+* Contributors: Adrià Roig, Sai Kishor Kothakota
+
 2.0.2 (2025-03-12)
 ------------------
 

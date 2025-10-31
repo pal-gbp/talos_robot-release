@@ -25,21 +25,29 @@
     <xacro:include filename="$(find talos_description)/urdf/head/head.ros2_control.xacro" />
     <xacro:include filename="$(find talos_description)/urdf/leg/leg.ros2_control.xacro" />
     <xacro:include filename="$(find talos_description)/urdf/torso/torso.ros2_control.xacro" />
-    <xacro:include filename="$(find talos_description)/urdf/sensors/imu.ros2_control.xacro" />
-    <xacro:include filename="$(find talos_description)/urdf/sensors/ftsensor.ros2_control.xacro" />
+    <xacro:include filename="$(find pal_urdf_utils)/urdf/interaction_sensors/imu_sensors.ros2_control.xacro" />
+    <xacro:include filename="$(find pal_urdf_utils)/urdf/ft_sensors/ftsensor.ros2_control.xacro" />
     <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
 
     <!-- Calibration offsets -->
     <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
 
-    <ros2_control name="ros2_control_talos_system" type="system">
+    <ros2_control name="ros2_control_talos_system" type="system" is_async="${'false' if use_sim else 'true'}">
 
+      <xacro:unless value="$(arg use_sim)">
+        <properties>
+          <async thread_priority="70" affinity="[4]" scheduling_policy="detached"/>
+        </properties>
+      </xacro:unless>
       <hardware>
         <xacro:if value="$(arg use_sim)">
           <plugin>gazebo_ros2_control/GazeboSystem</plugin>
         </xacro:if>
         <xacro:unless value="$(arg use_sim)">
           <plugin>robot_control/RobotControl</plugin>
+          <param name="error_protection">true</param>
+          <param name="idle_mode_on_stop">true</param>
+          <param name="idle_mode_on_stop_interfaces">[current, effort, torque]</param>
         </xacro:unless>
       </hardware>
 
@@ -79,10 +87,10 @@
       <xacro:ros2_control_torso name="torso"/>
 
       <!-- Force Torque sensor-->
-      <xacro:ros2_control_force_torque_sensor name="wrist" side="right"/>
-      <xacro:ros2_control_force_torque_sensor name="wrist" side="left"/>
-      <xacro:ros2_control_force_torque_sensor name="ankle" side="right"/>
-      <xacro:ros2_control_force_torque_sensor name="ankle" side="left"/>
+      <xacro:ros2_control_force_torque_sensor name="wrist_right_ft_sensor"/>
+      <xacro:ros2_control_force_torque_sensor name="wrist_left_ft_sensor"/>
+      <xacro:ros2_control_force_torque_sensor name="ankle_right_ft_sensor"/>
+      <xacro:ros2_control_force_torque_sensor name="ankle_left_ft_sensor"/>
 
       <!-- Leg left -->
       <xacro:ros2_control_leg side="left" number="1" />
@@ -103,10 +111,14 @@
     </ros2_control>
 
     <xacro:unless value="$(arg use_sim)">
-      <ros2_control name="ros2_control_orientus" type="sensor">
+      <ros2_control name="ros2_control_orientus" type="sensor" rw_rate="1000" is_async="true">
         <hardware>
           <plugin>pal_orientus_sensor/OrientusSensor</plugin>
           <param name="io_device">/dev/ttyS4</param>
+          <param name="sensor_name">imu_sensor</param>
+          <param name="orientation_to_enu_frame">3.14159, 0.0, 1.570796</param>
+          <!-- The following parameter is used to enable the ENU transformation for velocity and acceleration -->
+          <param name="enable_orientation_to_enu_frame">false</param>
         </hardware>
       </ros2_control>
     </xacro:unless>

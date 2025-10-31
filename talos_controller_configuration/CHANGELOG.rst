@@ -2,6 +2,61 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.9.1 (2025-10-30)
+------------------
+
+2.9.0 (2025-10-23)
+------------------
+
+2.8.1 (2025-09-09)
+------------------
+
+2.8.0 (2025-09-08)
+------------------
+
+2.7.0 (2025-09-03)
+------------------
+
+2.6.0 (2025-07-16)
+------------------
+* Rename imu name and add ENU parameters
+* Contributors: Isaac Acevedo
+
+2.5.0 (2025-07-10)
+------------------
+* Add diagnostic analyzers
+* Contributors: Noel Jimenez
+
+2.4.0 (2025-07-09)
+------------------
+
+2.3.0 (2025-07-03)
+------------------
+
+2.2.3 (2025-06-30)
+------------------
+
+2.2.2 (2025-06-30)
+------------------
+* Fix the naming of th torque_broadcaster. Add it to the launch description.
+* Contributors: Maximilien Naveau
+
+2.2.1 (2025-06-26)
+------------------
+
+2.2.0 (2025-06-25)
+------------------
+* Adding joint_torque_state_broadcaster
+  Publishes torque as effort and absolute position as position
+* Contributors: Jordan Palacios
+
+2.1.1 (2025-06-20)
+------------------
+* Added module for starting the default_broadcasters
+* bringup_controllers is now default_broadcasters
+* Removing unnecessary controllers
+* Contributors: Jordan Palacios
+
 2.1.0 (2025-06-18)
 ------------------
 

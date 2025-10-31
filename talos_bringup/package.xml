@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>talos_bringup</name>
-  <version>2.1.0</version>
+  <version>2.9.1</version>
   <description>The talos_bringup package</description>
 
   <maintainer email="adria.roig@pal-robotics.com">Adria Roig</maintainer>
@@ -14,12 +14,15 @@
  <!--
   <run_depend>talos_moveit_config</run_depend>
 --> 
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>diagnostic_aggregator</exec_depend>
   <exec_depend>talos_controller_configuration</exec_depend>
   <exec_depend>talos_description</exec_depend>
   <exec_depend>joy_linux</exec_depend>
   <exec_depend>joy_teleop</exec_depend>
   <exec_depend>twist_mux</exec_depend>
   <exec_depend>play_motion2</exec_depend>
+  <exec_depend>play_motion2_cli</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>

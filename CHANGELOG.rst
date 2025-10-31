@@ -2,6 +2,89 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.9.1 (2025-10-30)
+------------------
+* Add condition for pal_transmissions dependency
+* Contributors: Noel Jimenez
+
+2.9.0 (2025-10-23)
+------------------
+
+2.8.1 (2025-09-09)
+------------------
+* Merge branch 'set/is_async/use_sim' into 'humble-devel'
+  Set is_async based on use_sim arg
+  See merge request robots/talos_robot!159
+* Set is_async based on use_sim arg
+* Contributors: Sai Kishor Kothakota
+
+2.8.0 (2025-09-08)
+------------------
+* set the scheduling policy info only for the real robot
+* Contributors: Sai Kishor Kothakota
+
+2.7.0 (2025-09-03)
+------------------
+* Merge branch 'add/ros2_control/hw_components' into 'alum-devel'
+  Add async properties to the ros2_control hardware components
+  See merge request robots/talos_robot!156
+* Change the sensor_name to imu_sensor
+* Add async properties to the ros2_control hardware components
+* Merge branch 'add/pal_transmissions/dependency' into 'alum-devel'
+  Add pal_transmissions dependency
+  See merge request robots/talos_robot!157
+* Add pal_transmissions dependency
+* Merge branch 'fix/wrist/transmission' into 'alum-devel'
+  Fix the wrist transmission xacro macro
+  See merge request robots/talos_robot!155
+* Update wrist.transmission.xacro
+* Fix the wrist transmission xacro macro
+* Contributors: Adria Roig, Sai Kishor Kothakota
+
+2.6.0 (2025-07-16)
+------------------
+* Rename imu name and add ENU parameters
+* Contributors: Isaac Acevedo
+
+2.5.0 (2025-07-10)
+------------------
+
+2.4.0 (2025-07-09)
+------------------
+
+2.3.0 (2025-07-03)
+------------------
+* Fix camera OS1-64 path
+* Change xtion camera and  ouster camera to urdf_utils
+* Change orbbec camera to urdf_utils
+* Change path for ati, imu and deg_to_grad
+* Move ati sensors to pal_urdf_utils
+* Change path for ft ros2 control urdf
+* Change path for imu ros2 control urdf
+* Contributors: Aina
+
+2.2.3 (2025-06-30)
+------------------
+* Enable idle_mode_on_stop for current, effort and torque
+* Enable error_protection
+* Contributors: Jordan Palacios
+
+2.2.2 (2025-06-30)
+------------------
+* Fix the integration of the imu in the gazebo classic
+* Contributors: Maximilien Naveau
+
+2.2.1 (2025-06-26)
+------------------
+
+2.2.0 (2025-06-25)
+------------------
+* Expose torque and absolute position state interfaces in the ros2 control transmissions
+* Contributors: Jordan Palacios
+
+2.1.1 (2025-06-20)
+------------------
+
 2.1.0 (2025-06-18)
 ------------------
 

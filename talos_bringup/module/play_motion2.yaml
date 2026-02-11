@@ -1,2 +1,0 @@
-play_motion2:
-  launch: "talos_bringup talos_play_motion2.launch.py"

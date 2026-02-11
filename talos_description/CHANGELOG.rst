@@ -2,6 +2,27 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.10.3 (2026-02-10)
+-------------------
+* Expose safety interface for robot_control
+* Contributors: Noel Jimenez
+
+2.10.2 (2026-01-21)
+-------------------
+* Changing robot_control affinity
+* Contributors: Jordan Palacios
+
+2.10.1 (2026-01-08)
+-------------------
+
+2.10.0 (2025-12-05)
+-------------------
+* Add gazebo_version xacro argument
+* Contributors: Noel Jimenez
+
+2.9.2 (2025-12-05)
+------------------
+
 2.9.1 (2025-10-30)
 ------------------
 * Add condition for pal_transmissions dependency
